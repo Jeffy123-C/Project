@@ -15,7 +15,7 @@ public class ExcelUtility {
 	public static String getStringData(int a,int b,String sheet) throws 
 	IOException
 	{
-		f=new FileInputStream("C:\\Users\\Jeffy P Jerry\\eclipse-workspace\\GrocceryApplication\\src\\test\\resources\\TestData.xlsx");
+		f=new FileInputStream("C:\\Users\\Jeffy P Jerry\\git\\Project\\GrocceryApplication\\src\\test\\resources\\TestData.xlsx");
 		wb= new XSSFWorkbook(f);
 		sh=wb.getSheet(sheet);//method to get details from the sheet
 		XSSFRow r =sh.getRow(a);//in builtclass used to read data from the row,getrow method to getvalues from row
@@ -24,7 +24,7 @@ public class ExcelUtility {
 	}
 	public static String getIntegerData(int a,int b,String sheet) throws IOException
 	{
-	f=new FileInputStream("C:\\Users\\Jeffy P Jerry\\eclipse-workspace\\GrocceryApplication\\src\\test\\resources\\TestData.xlsx");
+	f=new FileInputStream("C:\\Users\\Jeffy P Jerry\\git\\Project\\GrocceryApplication\\src\\test\\resources\\TestData.xlsx");
 	wb=new XSSFWorkbook(f);
 	sh=wb.getSheet(sheet);
 	XSSFRow r=sh.getRow(a);
@@ -35,7 +35,7 @@ public class ExcelUtility {
 	}
 	public static String getFloatData(int a,int b,String sheet) throws IOException
 	{
-	f=new FileInputStream("C:\\Users\\Jeffy P Jerry\\eclipse-workspace\\GrocceryApplication\\src\\test\\resources\\TestData.xlsx");
+	f=new FileInputStream("C:\\Users\\Jeffy P Jerry\\git\\Project\\GrocceryApplication\\src\\test\\resources\\TestData.xlsx");
 	wb=new XSSFWorkbook(f);
 	sh=wb.getSheet(sheet);
 	XSSFRow r=sh.getRow(a);
