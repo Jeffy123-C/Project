@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-07T21:51:53 IST" name="Default suite" finished-at="2025-11-07T21:52:00 IST" duration-ms="6776">
+  <suite started-at="2025-11-12T20:23:54 IST" name="Default suite" finished-at="2025-11-12T20:24:02 IST" duration-ms="7528">
     <groups>
     </groups>
-    <test started-at="2025-11-07T21:51:53 IST" name="Default test" finished-at="2025-11-07T21:52:00 IST" duration-ms="6776">
-      <class name="testScript.HomeTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testScript.HomeTest@2a4fb17b]" started-at="2025-11-07T21:51:53 IST" name="initializeBrowser" finished-at="2025-11-07T21:51:57 IST" duration-ms="3887" status="PASS">
+    <test started-at="2025-11-12T20:23:54 IST" name="Default test" finished-at="2025-11-12T20:24:02 IST" duration-ms="7528">
+      <class name="testScript.ManageNewsTest">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testScript.ManageNewsTest@48f2bd5b]" started-at="2025-11-12T20:23:54 IST" name="initializeBrowser" finished-at="2025-11-12T20:23:59 IST" duration-ms="4586" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyUserIsAbleToLogout()[pri:0, instance:testScript.HomeTest@2a4fb17b]" started-at="2025-11-07T21:51:57 IST" name="verifyUserIsAbleToLogout" finished-at="2025-11-07T21:52:00 IST" duration-ms="2841" status="PASS">
+        <test-method signature="verifyUserIsAbleToAddNews()[pri:0, instance:testScript.ManageNewsTest@48f2bd5b]" started-at="2025-11-12T20:23:59 IST" name="verifyUserIsAbleToAddNews" finished-at="2025-11-12T20:24:02 IST" duration-ms="2900" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToLogout -->
-        <test-method is-config="true" signature="driverCloseAndQuit()[pri:0, instance:testScript.HomeTest@2a4fb17b]" started-at="2025-11-07T21:52:00 IST" name="driverCloseAndQuit" finished-at="2025-11-07T21:52:00 IST" duration-ms="5" status="PASS">
+        </test-method> <!-- verifyUserIsAbleToAddNews -->
+        <test-method is-config="true" signature="driverCloseAndQuit()[pri:0, instance:testScript.ManageNewsTest@48f2bd5b]" started-at="2025-11-12T20:24:02 IST" name="driverCloseAndQuit" finished-at="2025-11-12T20:24:02 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverCloseAndQuit -->
-      </class> <!-- testScript.HomeTest -->
+      </class> <!-- testScript.ManageNewsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

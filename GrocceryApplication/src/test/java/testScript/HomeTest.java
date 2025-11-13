@@ -22,6 +22,7 @@ public class HomeTest extends Base {
 		homepage.clickOnAdminButton();
 		homepage.clickOnLogoutButton();
 		
+		
 	}
 	
 
