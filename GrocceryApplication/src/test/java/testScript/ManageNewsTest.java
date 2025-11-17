@@ -11,7 +11,7 @@ import pages.ManageNewsPage;
 import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base {
-	@Test
+	@Test(description="verifying user able to add new news")
 	public void verifyUserIsAbleToAddNews() throws IOException {
 		String username=ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password=ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -28,7 +28,7 @@ public class ManageNewsTest extends Base {
 	    newspage.clickOnSaveButton();
 						
 }
-	@Test
+	@Test(description="verifying user able to search the news")
 	public void verifyUserIsAbleToSearch() throws IOException {
 		String username=ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password=ExcelUtility.getStringData(0, 1, "LoginPage");
