@@ -2,6 +2,7 @@ package testScript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
@@ -34,6 +35,9 @@ public class AdminUserTest extends Base{
 		adminpage.enterPasswordOnPasswordField(password1);
 		adminpage.selectUserType();
 		adminpage.clickOnSaveButton();
+		boolean isAlertDisplayed=adminpage.isSuccessfullAlertDisplayed();
+		Assert.assertTrue(isAlertDisplayed,"user unable to add new admin user successfully ");
+				
 						
 	}
 	
@@ -54,6 +58,10 @@ public class AdminUserTest extends Base{
 		adminpage.enterUsernameOnSearchUsernameField(username1);
 		adminpage.selectUserTypedropdown();		
 		adminpage.clickOnSearchButton1();
+		boolean isNewUserSearched=adminpage.isSearchedUserDisplayed();
+		Assert.assertTrue(isNewUserSearched,"user unable to search new admin user");
+				
+						
 								
 	}
 @Test(description="verifying user able to reset the user info")
@@ -69,6 +77,8 @@ public void verifyUserIsAbleToResetUsersInfo() throws IOException {
 	homepage.clickOnMoreInfoLink();
 	AdminPage adminpage=new AdminPage(driver);
 	adminpage.clickOnResetButton();
+	boolean isResetButtonDisplayed=adminpage.isResetButtonDisplayed();
+	Assert.assertTrue(isResetButtonDisplayed,"user unable to reset user info");
 	
 							
 }

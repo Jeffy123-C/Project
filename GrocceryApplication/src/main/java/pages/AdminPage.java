@@ -23,6 +23,8 @@ public class AdminPage {
 	@FindBy(name="ut") WebElement dropdown;
 	@FindBy(name="Search") WebElement searchbutton1;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']") WebElement resetbutton;
+@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertmessage;
+@FindBy(xpath="//td[text()='jeffy']") WebElement searchuser;
 	
 	public void clickOnNewButton() {
 		newbutton.click();
@@ -58,6 +60,18 @@ public class AdminPage {
 	}
 	public void clickOnResetButton() {
 		resetbutton.click();
+	}
+	public boolean isSuccessfullAlertDisplayed() {
+		return alertmessage.isDisplayed();
+	}
+	public boolean isDisplayed() {
+		return alertmessage.isDisplayed();
+	}
+	public boolean isSearchedUserDisplayed() {
+		return searchuser.isDisplayed();
+	}
+	public boolean isResetButtonDisplayed() {
+		return resetbutton.isDisplayed();
 	}
 
 }

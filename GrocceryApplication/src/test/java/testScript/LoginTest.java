@@ -10,7 +10,7 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
-	@Test(priority=1,description="verifying successful user login with valid credentials")
+	@Test(priority=1,description="verifying successful user login with valid credentials",groups= {"smoke"})
 	public void verifyUserLoginWithValidCredentials() throws IOException {
 		String username=ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password=ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -46,9 +46,12 @@ public class LoginTest extends Base {
 		loginpage.enterPasswordOnPasswordField(password);
 		
 		loginpage.clickOnSignInButton();
+		String actual=loginpage.getSignInTitle();
+		String expected="Sign in to start your session";
+		Assert.assertEquals(actual, expected,"user was able to login with invalid username");
 		
 	}
-	@Test(priority=4,description="verifying user login with invalid credentials")
+	@Test(priority=4,description="verifying user login with invalid credentials",groups= {"smoke"})
 	public void verifyUserLoginWithInvalidCredentials() throws IOException {
 		String username=ExcelUtility.getStringData(3, 0, "LoginPage");
 		String password=ExcelUtility.getStringData(3, 1, "LoginPage");

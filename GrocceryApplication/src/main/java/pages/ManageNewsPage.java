@@ -20,6 +20,8 @@ public class ManageNewsPage {
 @FindBy(xpath="//a[@onclick='click_button(2)']") WebElement searchbutton;
 @FindBy(name="un") WebElement searchfield;
 @FindBy(name="Search") WebElement searchbutton1;
+@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertmessage;
+@FindBy(name="un") WebElement searchnews;
 
 public void clickOnNewButton() {
 	newbutton.click();
@@ -39,6 +41,13 @@ public void enterNewsOnSearchField(String news) {
 }
 public void clickOnSearchButton1() {
 	searchbutton1.click();
+	
+}
+public boolean successfullalertmessageDisplayed() {
+	return alertmessage.isDisplayed();
+}
+public String getSearchedNews() {
+	return searchnews.getText();
 	
 }
 

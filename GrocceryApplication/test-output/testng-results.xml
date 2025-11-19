@@ -1,25 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-17T12:11:30 IST" name="Suite" finished-at="2025-11-17T12:11:35 IST" duration-ms="4254">
+  <suite started-at="2025-11-19T11:49:49 IST" name="Grouping" finished-at="2025-11-19T11:50:01 IST" duration-ms="12483">
     <groups>
+      <group name="smoke">
+        <method signature="LoginTest.verifyUserLoginWithValidCredentials()[pri:1, instance:testScript.LoginTest@59474f18]" name="verifyUserLoginWithValidCredentials" class="testScript.LoginTest"/>
+        <method signature="LoginTest.verifyUserLoginWithInvalidCredentials()[pri:4, instance:testScript.LoginTest@59474f18]" name="verifyUserLoginWithInvalidCredentials" class="testScript.LoginTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-11-17T12:11:30 IST" name="Test" finished-at="2025-11-17T12:11:35 IST" duration-ms="4254">
+    <test started-at="2025-11-19T11:49:49 IST" name="Test" finished-at="2025-11-19T11:50:01 IST" duration-ms="12483">
       <class name="testScript.LoginTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testScript.LoginTest@6933b6c6]" started-at="2025-11-17T12:11:30 IST" name="initializeBrowser" finished-at="2025-11-17T12:11:33 IST" duration-ms="2102" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScript.LoginTest@59474f18]" started-at="2025-11-19T11:49:49 IST" name="initializeBrowser" finished-at="2025-11-19T11:49:51 IST" duration-ms="2182" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyUserLoginWithInvalidUsernameAndValidPassword()[pri:2, instance:testScript.LoginTest@6933b6c6]" started-at="2025-11-17T12:11:33 IST" name="verifyUserLoginWithInvalidUsernameAndValidPassword" description="verifying user login with invalid username and valid password" finished-at="2025-11-17T12:11:34 IST" duration-ms="1353" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="verifyUserLoginWithValidCredentials()[pri:1, instance:testScript.LoginTest@59474f18]" started-at="2025-11-19T11:49:51 IST" name="verifyUserLoginWithValidCredentials" description="verifying successful user login with valid credentials" finished-at="2025-11-19T11:49:53 IST" duration-ms="2050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithValidCredentials -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@59474f18]" started-at="2025-11-19T11:49:53 IST" name="driverQuit" finished-at="2025-11-19T11:49:53 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyUserLoginWithValidCredentials()[pri:1, instance:testScript.LoginTest@59474f18] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScript.LoginTest@59474f18]" started-at="2025-11-19T11:49:53 IST" name="initializeBrowser" finished-at="2025-11-19T11:49:56 IST" duration-ms="2320" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyUserLoginWithInvalidCredentials()[pri:4, instance:testScript.LoginTest@59474f18]" started-at="2025-11-19T11:49:56 IST" name="verifyUserLoginWithInvalidCredentials" description="verifying user login with invalid credentials" finished-at="2025-11-19T11:50:01 IST" duration-ms="5635" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" because "r" is null]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='Dashboard']"}
+  (Session info: chrome=142.0.7444.163)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0146d55558b18b15cbfe6dfbe16e4612, findElement {value=//p[text()='Dashboard'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.163, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\JEFFYP~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54385}, goog:processID: 24068, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54385/devtoo..., se:cdpVersion: 142.0.7444.163, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0146d55558b18b15cbfe6dfbe16e4612]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" because "r" is null
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:22)
-at testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword(LoginTest.java:27)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='Dashboard']"}
+  (Session info: chrome=142.0.7444.163)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0146d55558b18b15cbfe6dfbe16e4612, findElement {value=//p[text()='Dashboard'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.163, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\JEFFYP~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54385}, goog:processID: 24068, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54385/devtoo..., se:cdpVersion: 142.0.7444.163, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0146d55558b18b15cbfe6dfbe16e4612
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+at pages.LoginPage.dashboardDisplayed(LoginPage.java:35)
+at testScript.LoginTest.verifyUserLoginWithInvalidCredentials(LoginTest.java:63)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -48,15 +118,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginWithInvalidUsernameAndValidPassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@6933b6c6]" started-at="2025-11-17T12:11:34 IST" name="driverQuit" finished-at="2025-11-17T12:11:35 IST" duration-ms="703" status="PASS">
+        </test-method> <!-- verifyUserLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@59474f18]" started-at="2025-11-19T11:50:01 IST" name="driverQuit" finished-at="2025-11-19T11:50:01 IST" duration-ms="218" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserLoginWithInvalidUsernameAndValidPassword status=FAILURE method=LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword()[pri:2, instance:testScript.LoginTest@6933b6c6] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserLoginWithInvalidCredentials status=FAILURE method=LoginTest.verifyUserLoginWithInvalidCredentials()[pri:4, instance:testScript.LoginTest@59474f18] output={null}]]]>
               </value>
             </param>
           </params>
@@ -65,5 +135,5 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- driverQuit -->
       </class> <!-- testScript.LoginTest -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- Grouping -->
 </testng-results>

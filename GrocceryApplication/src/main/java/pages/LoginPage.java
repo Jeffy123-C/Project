@@ -18,6 +18,7 @@ public class LoginPage {
 	@FindBy(xpath="//button[@type='submit']") WebElement signinbutton;
 	@FindBy(xpath="//p[text()='Dashboard']") WebElement dashboard;
 	@FindBy(xpath="//b[text()='7rmart supermarket']") WebElement title;
+	@FindBy(xpath="//p[text()='Sign in to start your session']") WebElement signintitle;
 
 	public void enterUsernameOnUsernameField(String username) {
 		usernamefield.sendKeys(username);
@@ -36,6 +37,9 @@ public class LoginPage {
 	public String getPageTitle() {
 		return title.getText();
 		
+	}
+	public String getSignInTitle() {
+		return signintitle.getText();
 	}
 	}
 

@@ -2,6 +2,7 @@ package testScript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
@@ -26,6 +27,8 @@ public class ManageNewsTest extends Base {
 		String news=ExcelUtility.getStringData(0, 0, "NewsPage");
 		newspage.enterNewsOnNewsField(news);
 	    newspage.clickOnSaveButton();
+	    boolean isSuccessfullMessageDisplayed=newspage.successfullalertmessageDisplayed();
+		Assert.assertTrue(isSuccessfullMessageDisplayed,"user unable to add news");
 						
 }
 	@Test(description="verifying user able to search the news")
@@ -43,7 +46,10 @@ public class ManageNewsTest extends Base {
 		String news=ExcelUtility.getStringData(0, 0, "NewsPage");
 		newspage.enterNewsOnSearchField(news);
 		newspage.clickOnSearchButton1();
-		
+		String actual=newspage.getSearchedNews();
+		String expected="New Product launched…...";
+		Assert.assertEquals(actual, expected,"user unable to search news");
+			
 	
 }
 }
