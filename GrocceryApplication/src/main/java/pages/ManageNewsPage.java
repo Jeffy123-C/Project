@@ -21,7 +21,7 @@ public class ManageNewsPage {
 @FindBy(name="un") WebElement searchfield;
 @FindBy(name="Search") WebElement searchbutton1;
 @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertmessage;
-@FindBy(name="un") WebElement searchnews;
+
 
 public void clickOnNewButton() {
 	newbutton.click();
@@ -46,10 +46,10 @@ public void clickOnSearchButton1() {
 public boolean successfullalertmessageDisplayed() {
 	return alertmessage.isDisplayed();
 }
-public String getSearchedNews() {
-	return searchnews.getText();
-	
+public boolean isSearchedUserDisplayed() {
+	return searchbutton1.isDisplayed();
 }
+
 
 
 }

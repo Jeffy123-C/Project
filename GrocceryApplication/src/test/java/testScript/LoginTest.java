@@ -60,8 +60,10 @@ public class LoginTest extends Base {
 		loginpage.enterUsernameOnUsernameField(username);
 		loginpage.enterPasswordOnPasswordField(password);
 		loginpage.clickOnSignInButton();
-		boolean isDashboardDisplayed=loginpage.dashboardDisplayed();
-		Assert.assertFalse(isDashboardDisplayed, "user is able to login with valid credentials");
+		String actual=loginpage.getPageTitle();
+		String expected="7rmart supermarket";
+		Assert.assertEquals(actual, expected,"user was able to login with invalid username");
+		
 	}
 
 

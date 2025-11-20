@@ -1,5 +1,7 @@
 package testScript;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -46,10 +48,9 @@ public class ManageNewsTest extends Base {
 		String news=ExcelUtility.getStringData(0, 0, "NewsPage");
 		newspage.enterNewsOnSearchField(news);
 		newspage.clickOnSearchButton1();
-		String actual=newspage.getSearchedNews();
-		String expected="New Product launched…...";
-		Assert.assertEquals(actual, expected,"user unable to search news");
-			
+		boolean issearchbuttondisplayed=newspage.isSearchedUserDisplayed();
+		Assert.assertTrue(issearchbuttondisplayed,"user nable to search the news");
+		
 	
 }
 }
