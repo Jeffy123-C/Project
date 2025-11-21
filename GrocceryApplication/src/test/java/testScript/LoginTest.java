@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import constants.Constant;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
@@ -19,7 +20,7 @@ public class LoginTest extends Base {
 		loginpage.enterPasswordOnPasswordField(password);
 		loginpage.clickOnSignInButton();
 		boolean isDashboardDisplayed=loginpage.dashboardDisplayed();
-		Assert.assertTrue(isDashboardDisplayed,"user was unable to login with valid credentials");
+		Assert.assertTrue(isDashboardDisplayed,Constant.ValidCredentialErrorMessage);
 		
 	}
 	@Test(priority=2,description="verifying user login with invalid username and valid password")

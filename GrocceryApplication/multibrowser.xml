@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Parallel Testing" parallel="classes">
+<suite name="Multibrowser Testing" parallel="classes">
 
   <test thread-count="5" name="Test1">
   
@@ -17,7 +17,7 @@
   </test> <!-- Test -->
     <test thread-count="5" name="Test2">
     
-<parameter name="browsers" value="chrome"></parameter>
+<parameter name="browsers" value="firefox"></parameter>
     <classes>
 
       <class name="testScript.LoginTest">
