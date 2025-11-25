@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import constants.Constant;
 import pages.AdminPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -36,7 +37,7 @@ public class AdminUserTest extends Base{
 		adminpage.selectUserType();
 		adminpage.clickOnSaveButton();
 		boolean isAlertDisplayed=adminpage.isSuccessfullAlertDisplayed();
-		Assert.assertTrue(isAlertDisplayed,"user unable to add new admin user successfully ");
+		Assert.assertTrue(isAlertDisplayed,Constant.AddingNewUserErrorMessage);
 				
 						
 	}
@@ -59,7 +60,7 @@ public class AdminUserTest extends Base{
 		adminpage.selectUserTypedropdown();		
 		adminpage.clickOnSearchButton1();
 		boolean isNewUserSearched=adminpage.isSearchedUserDisplayed();
-		Assert.assertTrue(isNewUserSearched,"user unable to search new admin user");
+		Assert.assertTrue(isNewUserSearched,Constant.SearchingNewUserErrorMessage);
 				
 						
 								
@@ -78,7 +79,7 @@ public void verifyUserIsAbleToResetUsersInfo() throws IOException {
 	AdminPage adminpage=new AdminPage(driver);
 	adminpage.clickOnResetButton();
 	boolean isResetButtonDisplayed=adminpage.isResetButtonDisplayed();
-	Assert.assertTrue(isResetButtonDisplayed,"user unable to reset user info");
+	Assert.assertTrue(isResetButtonDisplayed,Constant.ResetUserErrorMessage);
 	
 							
 }

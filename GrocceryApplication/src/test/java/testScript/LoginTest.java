@@ -3,6 +3,7 @@ package testScript;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
@@ -34,7 +35,7 @@ public class LoginTest extends Base {
 		loginpage.clickOnSignInButton();
 		String actual=loginpage.getPageTitle();
 		String expected="7rmart supermarket";
-		Assert.assertEquals(actual, expected,"user was able to login with invalid username");
+		Assert.assertEquals(actual, expected,Constant.InvalidUsernameErrorMessage);
 		
 	}
 	@Test(priority=3,description="verifying user login with valid username and invalid password")
@@ -49,13 +50,13 @@ public class LoginTest extends Base {
 		loginpage.clickOnSignInButton();
 		String actual=loginpage.getSignInTitle();
 		String expected="Sign in to start your session";
-		Assert.assertEquals(actual, expected,"user was able to login with invalid username");
+		Assert.assertEquals(actual, expected,Constant.InvalidPasswordErrorMessage);
 		
 	}
-	@Test(priority=4,description="verifying user login with invalid credentials",groups= {"smoke"})
-	public void verifyUserLoginWithInvalidCredentials() throws IOException {
-		String username=ExcelUtility.getStringData(3, 0, "LoginPage");
-		String password=ExcelUtility.getStringData(3, 1, "LoginPage");
+	@Test(priority=4,description="verifying user login with invalid credentials",groups= {"smoke"},dataProvider="loginProvider")
+	public void verifyUserLoginWithInvalidCredentials(String username,String password) throws IOException {
+		//String username=ExcelUtility.getStringData(3, 0, "LoginPage");
+		//String password=ExcelUtility.getStringData(3, 1, "LoginPage");
 		
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUsernameOnUsernameField(username);
@@ -63,10 +64,20 @@ public class LoginTest extends Base {
 		loginpage.clickOnSignInButton();
 		String actual=loginpage.getPageTitle();
 		String expected="7rmart supermarket";
-		Assert.assertEquals(actual, expected,"user was able to login with invalid username");
+		Assert.assertEquals(actual, expected,Constant.InvalidCredentialErrorMessage);
 		
 	}
+	@DataProvider(name = "loginProvider")
+	public Object[][] getDataFromDataProvider() throws IOException {
 
-
+		return new Object[][] { new Object[] { "admin", "admin22" }, new Object[] { "admin123", "123" },
+				// new Object[] {ExcelUtility.getStringData(3,
+				// 0,"Login"),ExcelUtility.getStringData(3,1 ,"Login")}
+		};
+	}
 }
+
+
+
+	
 
