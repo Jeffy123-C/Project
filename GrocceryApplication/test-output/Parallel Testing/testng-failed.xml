@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="classes" name="Failed suite [Parallel Testing]" guice-stage="DEVELOPMENT">
-  <parameter name="browsers" value="firefox"/>
   <test thread-count="5" parallel="classes" name="Test2(failed)">
+    <parameter name="browsers" value="chrome"/>
     <classes>
-      <class name="testScript.LoginTest">
+      <class name="testScript.ManageNewsTest">
         <methods>
           <include name="initializeBrowser"/>
-          <include name="verifyUserLoginWithInvalidCredentials"/>
           <include name="driverQuit"/>
+          <include name="verifyUserIsAbleToSearch"/>
+          <include name="verifyUserIsAbleToAddNews"/>
         </methods>
-      </class> <!-- testScript.LoginTest -->
+      </class> <!-- testScript.ManageNewsTest -->
     </classes>
   </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Parallel Testing] -->

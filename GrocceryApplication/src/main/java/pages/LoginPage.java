@@ -20,16 +20,18 @@ public class LoginPage {
 	@FindBy(xpath="//b[text()='7rmart supermarket']") WebElement title;
 	@FindBy(xpath="//p[text()='Sign in to start your session']") WebElement signintitle;
 
-	public void enterUsernameOnUsernameField(String username) {
+	public LoginPage enterUsernameOnUsernameField(String username) {
 		usernamefield.sendKeys(username);
-		
+		return this;//chaining of pages
 		
 	}
-	public void enterPasswordOnPasswordField(String password) {
+	public LoginPage enterPasswordOnPasswordField(String password) {
 		passwordfield.sendKeys(password);
+		return this;
 	}
-	public void clickOnSignInButton() {
+	public HomePage clickOnSignInButton() {
 		signinbutton.click();
+		return new HomePage(driver);
 	}
 	public boolean dashboardDisplayed() {
 		return dashboard.isDisplayed();

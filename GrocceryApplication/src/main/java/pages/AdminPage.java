@@ -26,40 +26,50 @@ public class AdminPage {
 @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertmessage;
 @FindBy(xpath="//td[text()='jeffy']") WebElement searchuser;
 	
-	public void clickOnNewButton() {
+	public AdminPage clickOnNewButton() {
 		newbutton.click();
+		return this;
 	}
-	public void enterUsernameOnUsernameField(String username1) {
-		usernamefield.sendKeys(username1);				
+	public AdminPage enterUsernameOnUsernameField(String username1) {
+		usernamefield.sendKeys(username1);	
+		return this;
 	}
-	public void enterPasswordOnPasswordField(String password1) {
+	public AdminPage enterPasswordOnPasswordField(String password1) {
 		passwordfield.sendKeys(password1);
+		return this;
 	}
-	public void selectUserType() {
+	public AdminPage selectUserType() {
 		Select select=new Select(usertypedropdown);
-		select.selectByIndex(2);		
+		select.selectByIndex(2);
+		return this;
 	}	
-	public void clickOnSaveButton() {
+	public AdminPage clickOnSaveButton() {
 		savebutton.click();
+		return this;
 	}
-	public void clickOnSearchButton() {
+	public AdminPage clickOnSearchButton() {
 		searchbutton.click();
+		return this;
 		
 	}
-	public void enterUsernameOnSearchUsernameField(String username1) {
+	public AdminPage enterUsernameOnSearchUsernameField(String username1) {
 		searchusernamefield.sendKeys(username1);
+		return this;
 		
 	}
-	public void selectUserTypedropdown() {
+	public AdminPage selectUserTypedropdown() {
 		Select select=new Select(dropdown);
-		select.selectByIndex(2);		
+		select.selectByIndex(2);	
+		return this;
 	}
-	public void clickOnSearchButton1() {
+	public AdminPage clickOnSearchButton1() {
 		searchbutton1.click();
+		return this;
 		
 	}
-	public void clickOnResetButton() {
+	public AdminPage clickOnResetButton() {
 		resetbutton.click();
+		return this;
 	}
 	public boolean isSuccessfullAlertDisplayed() {
 		return alertmessage.isDisplayed();

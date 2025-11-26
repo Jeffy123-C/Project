@@ -23,24 +23,30 @@ public class ManageNewsPage {
 @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertmessage;
 
 
-public void clickOnNewButton() {
+public ManageNewsPage clickOnNewButton() {
 	newbutton.click();
+	return this;
 }
-public void enterNewsOnNewsField(String news) {
-	newsfield.sendKeys(news);			
+public ManageNewsPage enterNewsOnNewsField(String news) {
+	newsfield.sendKeys(news);
+	return this;
 }
-public void clickOnSaveButton() {
+public ManageNewsPage clickOnSaveButton() {
 	savebutton.click();
+	return this;
 }
-public void clickOnSearchButton() {
+public ManageNewsPage clickOnSearchButton() {
 	searchbutton.click();
+	return this;
 	
 }
-public void enterNewsOnSearchField(String news) {
-	searchfield.sendKeys(news);		
+public ManageNewsPage enterNewsOnSearchField(String news) {
+	searchfield.sendKeys(news);	
+	return this;
 }
-public void clickOnSearchButton1() {
+public ManageNewsPage clickOnSearchButton1() {
 	searchbutton1.click();
+	return this;
 	
 }
 public boolean successfullalertmessageDisplayed() {

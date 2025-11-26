@@ -24,22 +24,26 @@ public class HomePage {
 
 		
 
-		public void clickOnAdminButton() {
+		public HomePage clickOnAdminButton() {
 			adminbutton.click();
+			return this;
 			
 			
 		}
-		public void clickOnLogoutButton() {
+		public LoginPage clickOnLogoutButton() {
 			logoutbutton.click();
+			return new LoginPage(driver);
 		
 		}
 
 
-		public void clickOnMoreInfoLink() {
+		public AdminPage clickOnMoreInfoLink() {
 			adminmoreinfolink.click();
+			return new AdminPage(driver);
 		}
-		public void clickOnNewsMoreInfoLink() {
+		public ManageNewsPage clickOnNewsMoreInfoLink() {
 			newsmoreinfolink.click();
+			return new ManageNewsPage(driver);
 		}
 		public boolean titleDisplayed() {
 			return title.isDisplayed();
