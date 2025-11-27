@@ -6,7 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.PageUtility;
+
 public class AdminPage {
+	PageUtility pageutility=new PageUtility();
 	public WebDriver driver;
 	public AdminPage(WebDriver driver) {
 		this.driver=driver;
@@ -39,8 +42,9 @@ public class AdminPage {
 		return this;
 	}
 	public AdminPage selectUserType() {
-		Select select=new Select(usertypedropdown);
-		select.selectByIndex(2);
+		pageutility.selectDropdownWithIndex(usertypedropdown, 2);;
+		//Select select=new Select(usertypedropdown);
+		//select.selectByIndex(2);
 		return this;
 	}	
 	public AdminPage clickOnSaveButton() {

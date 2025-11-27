@@ -5,9 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.WaitUtility;
+
 public class HomePage {
 	
 		public WebDriver driver;
+		WaitUtility waitutility=new WaitUtility();
 		public HomePage(WebDriver driver) {
 			this.driver=driver;
 			PageFactory.initElements(driver, this);
@@ -25,6 +28,7 @@ public class HomePage {
 		
 
 		public HomePage clickOnAdminButton() {
+			waitutility.waitUntilElementToBeClickable(driver, adminbutton);
 			adminbutton.click();
 			return this;
 			

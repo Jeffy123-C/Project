@@ -12,4 +12,6 @@ public class Constant {
 	public static final String AddingNewUserErrorMessage="user unable to add new user successfully";
 	public static final String SearchingNewUserErrorMessage="user unable to search new admin user";
 	public static final String ResetUserErrorMessage="user unable to reset user info";
+	public static final String ConfigFile=System.getProperty("user.dir")+"\\src\\main\\resources\\config.properties";
+			
 } 
